@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift Roster Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-calendar-alt"></i> Shift Roster Management</h1>
+            <div class="header-controls">
+                <div class="month-navigator">
+                    <button id="prevMonth" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                    <span id="currentMonth" class="current-month"></span>
+                    <button id="nextMonth" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <button id="todayBtn" class="today-btn">Today</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="roster-container">
+                <div class="roster-header">
+                    <h2>Monthly Roster</h2>
+                    <div class="shift-legend">
+                        <div class="legend-item">
+                            <span class="legend-color s1"></span>
+                            <span>S1 - ₹400</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color s2"></span>
+                            <span>S2 - ₹300</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color s3"></span>
+                            <span>S3 - ₹900</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color s4"></span>
+                            <span>S4 - ₹500</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color s5"></span>
+                            <span>S5 - ₹600</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="roster-table-container">
+                    <table id="rosterTable" class="roster-table">
+                        <thead>
+                            <tr>
+                                <th class="employee-col">Employee</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rosterBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="summary-container">
+                <h2>Monthly Summary</h2>
+                <div class="summary-table-container">
+                    <table id="summaryTable" class="summary-table">
+                        <thead>
+                            <tr>
+                                <th>Employee</th>
+                                <th>Total Days</th>
+                                <th>S1</th>
+                                <th>S2</th>
+                                <th>S3</th>
+                                <th>S4</th>
+                                <th>S5</th>
+                                <th>Total Amount (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="summaryBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shift Selection Modal -->
+    <div id="shiftModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Select Shift</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="shift-options">
+                    <button class="shift-option s1" data-shift="S1">S1 - ₹400</button>
+                    <button class="shift-option s2" data-shift="S2">S2 - ₹300</button>
+                    <button class="shift-option s3" data-shift="S3">S3 - ₹900</button>
+                    <button class="shift-option s4" data-shift="S4">S4 - ₹500</button>
+                    <button class="shift-option s5" data-shift="S5">S5 - ₹600</button>
+                    <button class="shift-option clear" data-shift="">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
