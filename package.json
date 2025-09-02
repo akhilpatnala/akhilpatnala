@@ -1,0 +1,22 @@
+{
+  "name": "shift-roster-app",
+  "version": "1.0.0",
+  "description": "A stylized shift roster application for managing 15 people with 5 different shifts",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["shift", "roster", "scheduling", "employee"],
+  "author": "Shift Roster Team",
+  "license": "MIT"
+}
